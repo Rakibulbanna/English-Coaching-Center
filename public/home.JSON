@@ -1,0 +1,47 @@
+[
+
+    {
+        "id": 1,
+        "name": "IELTS",
+        "duration": 90,
+        "class": 65,
+        "modeltest": 16,
+        "price": 15000,
+        "support": "all time",
+        "img": "https://www.communicateschool.co.uk/wp-content/uploads/2015/06/IELTS-logo.jpg"
+      },
+      {
+        "id": 2,
+        "name": "SET",
+        "duration": 65,
+        "class": 60,
+        "modeltest": 12,
+        "support": "all time",
+        "price": 12000,
+        "img": "https://www.abbeyschool.it/torino/wp-content/uploads/2020/01/preparazione-sat-a-torino-centro-preparazione-test-sat.png"
+      },
+      {
+        "id": 3,
+        "name": "GRE",
+        "duration": 120,
+        "class": 75,
+        "modeltest": 22,
+        "support": "lifetime",
+        "price": 22000,
+        "img": "data:image/png;base64,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"
+      },
+      {
+        "id": 4,
+        "name": "English",
+        "duration": 90,
+        "class": 70,
+        "modeltest": 15,
+        "support": "lifetime",
+        "price": 13000,
+        "img": "https://wspucla.files.wordpress.com/2018/01/learnenglish.jpg"
+      }
+
+
+
+
+    ]
