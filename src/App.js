@@ -6,7 +6,7 @@ import Course from './Component/Course/Course'
 import Mentor from './Component/Mentor/Mentor'
 import NotFound from './Component/NotFound/Notfound';
 import Footer from './Component/Footer/Footer';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Mentors from './Component/Mentors/Mentors';
 import Header from './Component/Header/Header';
 
