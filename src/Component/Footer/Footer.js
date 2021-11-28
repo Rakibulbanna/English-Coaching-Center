@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
             <p className="text-center fixed-bottom footer">Copyright ©
-                <small>Developed by Rakib</small></p>
+                <small>Developed by Rakib ul banna</small></p>
         </div>
     );
 };

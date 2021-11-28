@@ -2,19 +2,20 @@
     
     float: left;
     width: 33%;
-
 }
 .course-info{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     padding: 15px;
     margin: 20px;
     text-align: right;
+    border-radius: 6px;
 }
-.course-info:hover{
+.course-part:hover{
    background-color: gray;
 }
 .couse-photo{
-    text-align: center;
+    width: 250px;
+    height: 300px;
 }
 
 .couse-photo img{
@@ -26,12 +27,13 @@
 .course-information{
     text-align: center;
 }
-button{
-    background-color: goldenrod;
+.order-btn{
+    background-color: #725229;
     width: 140px;
     margin: 5px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
+    color: white;
 }
 

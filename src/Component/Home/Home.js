@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import ShowHomePage from '../ShowHomePage/ShowHomePage';
 import "./Home.css"
 
@@ -13,14 +14,17 @@ const Home = () => {
     // const { name, duration, modeltest, price, img } = course;
 
     return (
-        <div>
-            
-            {
-                course.map(course => 
-                    <ShowHomePage course={course}></ShowHomePage>)
-            }
 
-            </div>
+              <Container>
+              <h2 className="text-center">Our Mentor:{course.length}</h2>
+              <Row xs={1} md={3} className="g-4">
+               {
+                   
+                       course.map(course => 
+                    <ShowHomePage course={course}></ShowHomePage>)
+               } 
+               </Row>
+           </Container>
     );
 };
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { CardGroup, Container, Row } from 'react-bootstrap';
 import Courses from '../Courses/Courses';
 import "./Course.css"
 
@@ -11,13 +12,18 @@ const Course = () => {
     }, [])
 
     return (
-        <div>
-            <h1 className="text-center">Our total Course:{courses.length}</h1>
+        <Container>
+        <h1 className="text-center">Our total Course:{courses.length}</h1>
+            <Row xs={1} md={3} className="g-4">
             {
                 courses.map(course => <Courses course={course}
                     key={course.id}></Courses>)
             }
-        </div>
+            </Row>
+        </Container>
+            
+           
+        
     );
 };
 

@@ -14,23 +14,13 @@ import Header from './Component/Header/Header';
 function App() {
   return (
     <div>
-      <Header></Header>
-
 
       <Router>
-
-        <div className="menu-link text-center w-100 p-3 m-10">
-          <NavLink exact style={{ color: "white", textDecoration: "none", margin: "40px" }} to="/home">Home</NavLink>
-          <NavLink exact style={{ color: "white", textDecoration: "none", margin: "40px" }} to="/about">About</NavLink>
-          <NavLink exact style={{ color: "white", textDecoration: "none", margin: "40px" }} to="/course">Course/Services</NavLink>
-          <NavLink exact style={{ color: "white", textDecoration: "none", margin: "40px" }} to="/mentor">Mentor</NavLink>
-        </div>
-
+      <Header></Header>
 
         <Switch>
           <Route exact path="/">
             <About></About>
-
           </Route>
           <Route path="/home">
             <Home></Home>
@@ -54,6 +44,7 @@ function App() {
       <Mentor></Mentor>
       <NotFound></NotFound>
       <Footer></Footer> */}
+      <br />
       <div>
         <Footer></Footer>
 
