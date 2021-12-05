@@ -16,7 +16,7 @@ const Home = () => {
     return (
 
               <Container>
-              <h2 className="text-center">Our Mentor:{course.length}</h2>
+              <h2 className="text-center">Our sample courses</h2><br />
               <Row xs={1} md={3} className="g-4">
                {
                    

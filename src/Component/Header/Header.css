@@ -16,4 +16,11 @@
   .link-sp:hover {
     background: rgb(31, 18, 1);
     }
-  
+    
+    .nav-dropdown{
+    padding: 20px;
+   
+  }
+  .nav-dropdown:hover {
+    background: rgb(31, 18, 1);
+    }

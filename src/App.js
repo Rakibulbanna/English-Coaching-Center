@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Mentors from './Component/Mentors/Mentors';
 import Header from './Component/Header/Header';
 
+import UpcommingReserch from './Component/UpcommingReserch/UpcommingReserch';
+import OngoingReserch from './Component/OngoingReserch/OngoingReserch';
+import PublishedReserch from './Component/PublishedReserch/PublishedReserch';
+
 
 function App() {
   return (
@@ -31,9 +35,18 @@ function App() {
           <Route exact path="/course">
             <Course></Course>
           </Route>
+          <Route exact path="/upcommingreserch">
+            <UpcommingReserch></UpcommingReserch>
+          </Route>
+          <Route exact path="/ongoingreserch">
+            <OngoingReserch></OngoingReserch>
+          </Route>
+          <Route exact path="/publishedreserch">
+            <PublishedReserch></PublishedReserch>
+          </Route>
           <Route exact path="/mentor">
             <Mentor></Mentor>
-          </Route>
+            </Route>
           <Route exact path="*">
             <NotFound></NotFound>
 
