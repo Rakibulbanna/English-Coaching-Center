@@ -15,16 +15,16 @@ const Home = () => {
 
     return (
 
-              <Container>
-              <h2 className="text-center">Our sample courses</h2><br />
-              <Row xs={1} md={3} className="g-4">
-               {
-                   
-                       course.map(course => 
-                    <ShowHomePage course={course}></ShowHomePage>)
-               } 
-               </Row>
-           </Container>
+        <Container>
+            <h2 className="text-center">Our sample courses</h2><br />
+            <Row xs={1} md={3} className="g-4">
+                {
+
+                    course.map(course =>
+                        <ShowHomePage course={course}></ShowHomePage>)
+                }
+            </Row>
+        </Container>
     );
 };
 

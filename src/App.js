@@ -7,9 +7,7 @@ import Mentor from './Component/Mentor/Mentor'
 import NotFound from './Component/NotFound/Notfound';
 import Footer from './Component/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Mentors from './Component/Mentors/Mentors';
 import Header from './Component/Header/Header';
-
 import UpcommingReserch from './Component/UpcommingReserch/UpcommingReserch';
 import OngoingReserch from './Component/OngoingReserch/OngoingReserch';
 import PublishedReserch from './Component/PublishedReserch/PublishedReserch';
