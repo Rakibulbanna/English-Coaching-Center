@@ -13,6 +13,7 @@ import Header from './Component/Header/Header';
 import UpcommingReserch from './Component/UpcommingReserch/UpcommingReserch';
 import OngoingReserch from './Component/OngoingReserch/OngoingReserch';
 import PublishedReserch from './Component/PublishedReserch/PublishedReserch';
+import Accountcreation from './Component/Accountcreation/Accountcreation';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route exact path="/mentor">
             <Mentor></Mentor>
+            </Route>
+          <Route exact path="/accountcreation">
+            <Accountcreation></Accountcreation>
             </Route>
           <Route exact path="*">
             <NotFound></NotFound>

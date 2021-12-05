@@ -20,7 +20,7 @@ const Header = () => {
 
                     <Nav className="me-auto">
 
-                        <NavLink to="/" className="navbar-brand text-white logo-space logo-sp">Education center system</NavLink>
+                        <NavLink to="/" className="navbar-brand text-white logo-sp"><h4>Education center system</h4></NavLink>
                         <NavLink exact to="/home" className="navbar-brand text-white link-sp ">Home</NavLink>
                         <NavLink exact to="/about" className="navbar-brand text-white link-sp ">About</NavLink>
                         <NavLink exact to="/course" className="navbar-brand text-white link-sp ">Course</NavLink>
@@ -46,6 +46,7 @@ const Header = () => {
 
 
                         <NavLink exact to="/mentor" className="navbar-brand text-white link-sp ">Mentor</NavLink>
+                        <NavLink exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply for account</NavLink>
 
                     </Nav>
 

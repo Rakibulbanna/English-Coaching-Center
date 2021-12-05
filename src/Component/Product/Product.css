@@ -1,14 +1,5 @@
-.product{
-    display: flex;
-    border: 1px solid rgb(185, 196, 206);
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
-.product-name{
-    color: blue;
-    font-weight: 400;
-}
+
+
 .purchase-button{
     
     background-color: #725229;
@@ -21,4 +12,13 @@
 }
 .icon-color{
    color: goldenrod; 
+}
+.course-part{
+    
+    float: left;
+    width: 33%;
+}
+
+.course-part:hover{
+   background-color: gray;
 }

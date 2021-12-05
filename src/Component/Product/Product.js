@@ -9,12 +9,12 @@ const Product = (props) => {
     const {name,img,price,stock,seller,star }=props.product;
     
     return (
-          <Col>
+          <Col className="course-part">
       <Card>
         <Card.Img variant="top" src={img} alt="" />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          
+
           <h3>price : ${price}</h3>
            <Rating
            initialRating={star} 
