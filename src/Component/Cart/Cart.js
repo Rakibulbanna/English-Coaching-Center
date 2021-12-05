@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Cart.css';
 const Cart = (props) => {
 
@@ -19,20 +19,25 @@ const Cart = (props) => {
 
     //const [cnt,setcnt] = useState([]);
    
-   
-    //  for (const i of cart) {
-            
-    //      for (const j of cnt){
+   const uniqueNames = Array.from(new Set(cart));
 
-    //         if (i!==j){
-    //         setcnt(i);
-    //         }
+//    useEffect(() => {
+//         for (const i of cart) {
+            
+//          for (const j of cnt){
+
+//             if (i!==j){
+//             setcnt(i);
+//             break;
+//             }
    
-    //         }
-    //     //cnt.push();
-    // }  
+//             }
+//         //cnt.push();
+//     } 
+//    }, [cart,cnt])
+     
    
-  // console.log(cnt);
+//    console.log(cnt);
     
     /* */
     return (
@@ -48,7 +53,7 @@ const Cart = (props) => {
           
                 {
                     
-                    cart.map(cartShow => 
+                    uniqueNames.map(cartShow => 
                         
                         <div className="cart-selected-container">
                            
