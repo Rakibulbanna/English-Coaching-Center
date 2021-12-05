@@ -5,7 +5,7 @@ import "./Mentors.css"
 const Mentors = (props) => {
     const { name, email, img, address, titel } = props.mentor
     return (
-        <div className="mentor-part">
+        <div>
             {/* <article className="mentor-sub-part">
                 <div className="mentor-image text-center">
                     <img src={img} alt="" />
@@ -27,8 +27,7 @@ const Mentors = (props) => {
                     
                     <p><small className="text-info">{email}</small></p>
                     <h2>{name}</h2>
-                    <address>Address:<small className="text-warning"> {address}</small></address>
-                    <button className="order-btn">Order Now</button>
+                    <address>Address:<small className="text-secondary"> {address}</small></address>
                     </Card.Text>
                 </Card.Body>
             </Card>
