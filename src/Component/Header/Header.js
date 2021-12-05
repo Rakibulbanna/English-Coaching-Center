@@ -23,7 +23,7 @@ const Header = () => {
                         <NavLink to="/" className="navbar-brand text-white logo-space logo-sp">Education center system</NavLink>
                         <NavLink exact to="/home" className="navbar-brand text-white link-sp ">Home</NavLink>
                         <NavLink exact to="/about" className="navbar-brand text-white link-sp ">About</NavLink>
-                        <NavLink exact to="/course" className="navbar-brand text-white link-sp ">Course/Services</NavLink>
+                        <NavLink exact to="/course" className="navbar-brand text-white link-sp ">Course</NavLink>
 
                         <NavDropdown title={
                             <span className="navbar-brand text-white">Reserch</span>

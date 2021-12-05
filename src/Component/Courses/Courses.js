@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { Card, Col } from 'react-bootstrap';
 import './Courses.css'
 
@@ -30,6 +32,8 @@ const Courses = (props) => {
                     <p>Model Test: {modeltest}</p>
                     <button className="order-btn">Order Now</button>
                     </Card.Text>
+                    <br/><br/>
+    
                 </Card.Body>
             </Card>
         </Col>
