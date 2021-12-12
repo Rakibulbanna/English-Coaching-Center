@@ -12,9 +12,13 @@ import UpcommingReserch from './Component/UpcommingReserch/UpcommingReserch';
 import OngoingReserch from './Component/OngoingReserch/OngoingReserch';
 import PublishedReserch from './Component/PublishedReserch/PublishedReserch';
 import Accountcreation from './Component/Accountcreation/Accountcreation';
+import Login from './Component/Login/Login';
+import  {Button} from 'react-bootstrap';
+import { useState } from 'react';
 
 
 function App() {
+  
   return (
     <div>
 
@@ -23,7 +27,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <About></About>
+          <Home></Home>
           </Route>
           <Route path="/home">
             <Home></Home>
@@ -49,10 +53,16 @@ function App() {
           <Route exact path="/accountcreation">
             <Accountcreation></Accountcreation>
             </Route>
+            <Route exact path="/login">
+              <Login ></Login>
+              {/* <Login handleGoogleSignIn={handleGoogleSignIn} handleSignOut={handleSignOut} user={user}></Login> */}
+          </Route>
+
           <Route exact path="*">
             <NotFound></NotFound>
+            </Route>
 
-          </Route>
+          
         </Switch>
       </Router>
       {/* <Course></Course>

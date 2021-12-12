@@ -1,8 +1,9 @@
+import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Carousel, Container, Row } from 'react-bootstrap';
 import ShowHomePage from '../ShowHomePage/ShowHomePage';
 import "./Home.css"
-
+import bannerimg from './../../image/banner.png';
 const Home = () => {
     const [course, setCourse] = useState([])
     useEffect(() => {
@@ -12,19 +13,63 @@ const Home = () => {
     }, [])
 
     // const { name, duration, modeltest, price, img } = course;
-
+   
     return (
+<div>
+    <div className="carouselsize">
+
+    
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://image.slidesharecdn.com/setmytest-englishupload-191014112308/95/set-my-test-english-1-638.jpg?cb=1571052396"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>hwh4</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://wspucla.files.wordpress.com/2018/01/learnenglish.jpg"
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3>rtjhw</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={bannerimg}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>rtjhwehj</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  
+</Carousel>
+</div>
 
         <Container>
+            
             <h2 className="text-center">Our sample courses</h2><br />
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} md={2} className="g-5">
                 {
 
                     course.map(course =>
                         <ShowHomePage course={course}></ShowHomePage>)
                 }
             </Row>
-        </Container>
+        </Container>    
+</div>
     );
 };
 

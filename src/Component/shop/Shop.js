@@ -63,14 +63,14 @@ const Shop = () => {
 
         setdisplayProducts(matcherdProdect);
 
-        console.log(matcherdProdect.length);
+       // console.log(matcherdProdect.length);
     }
     return (
         <div>
             <div className="search-container">
                 <input type="text"
                     onChange={handelSearch}
-                    placeholder="serch here" />
+                    placeholder="search here" />
             </div>
             <div className="shop-container">
                 <Container >

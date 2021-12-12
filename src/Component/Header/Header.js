@@ -13,7 +13,7 @@ const Header = () => {
     }
     return (
         <div >
-            <Navbar className="menu-link w-100 p-3 m-10 b" collapseOnSelect expand="lg" id="navbar" >
+            <Navbar className="menu-link w-100 p-3 m-10" collapseOnSelect expand="lg" id="navbar" >
                 {/* <Container className="b"> */}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -46,7 +46,8 @@ const Header = () => {
 
 
                         <NavLink exact to="/mentor" className="navbar-brand text-white link-sp ">Mentor</NavLink>
-                        <NavLink exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply for account</NavLink>
+                        <NavLink exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply membership</NavLink>
+                        <NavLink exact to="/login" className="navbar-brand text-white link-sp ">login</NavLink>
 
                     </Nav>
 
