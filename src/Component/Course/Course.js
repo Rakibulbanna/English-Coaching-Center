@@ -5,12 +5,12 @@ import Shop from '../shop/Shop';
 import "./Course.css"
 
 const Course = () => {
-    const [courses, setcourses] = useState([])
-    useEffect(() => {
-        fetch("./products.json")
-            .then(res => res.json())
-            .then(data => setcourses(data))
-    }, [])
+    // const [courses, setcourses] = useState([])
+    // useEffect(() => {
+    //     fetch("./products.json")
+    //         .then(res => res.json())
+    //         .then(data => setcourses(data))
+    // }, [])
 
     return (
         <div>

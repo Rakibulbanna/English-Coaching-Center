@@ -3,7 +3,8 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import '../shop/Shop.css';
 import { addToDb, getStoredCart } from '../../utilities/fakedb'
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Card, Col } from 'react-bootstrap';
+
 const Shop = () => {
     const [products, setproducts] = useState([]);
 
@@ -63,7 +64,7 @@ const Shop = () => {
 
         setdisplayProducts(matcherdProdect);
 
-       // console.log(matcherdProdect.length);
+        // console.log(matcherdProdect.length);
     }
     return (
         <div>
@@ -72,22 +73,30 @@ const Shop = () => {
                     onChange={handelSearch}
                     placeholder="search here" />
             </div>
-            <div className="shop-container">
-                <Container >
-
-                    <h1 className="text-center">Our total Course:{displayProducts.length}</h1>
-                    <Row xs={1} md={3} className="g-4">
-                        {
-                            displayProducts.map(product => <Product product={product} key={product.key}
-                                handleAddToCart={handleAddToCart} ></Product>)
-                        }
-                    </Row>
-                </Container>
-
-                <div>
+            <Row>
+                 <Col sm={4}>
+                    <Card>
                     <Cart cart={cart}></Cart>
 
-                </div>
+                
+                    </Card>
+                </Col>
+                <Col sm={8}>
+                    <Card>
+                        <Container >
+
+                            <h1 className="text-center">Our total Course:{displayProducts.length}</h1>
+                            <Row xs={1} md={3} className="g-4">
+                                {
+                                    displayProducts.map(product => <Product product={product} key={product.key}
+                                        handleAddToCart={handleAddToCart} ></Product>)
+                                }
+                            </Row>
+                        </Container>
+
+                    </Card>
+                </Col>
+               
                 {/* <div className="product-container">
                   <h2>product : {products.length}</h2>
                   {
@@ -97,8 +106,7 @@ const Shop = () => {
               </div> */}
 
 
-            </div>
-
+            </Row>
         </div>
     );
 };
