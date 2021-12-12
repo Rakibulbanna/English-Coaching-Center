@@ -23,8 +23,8 @@
         "detail": "IELTS assesses a test taker's English language proficiency across four skills: listening, reading, writing, and speaking. ... With a focus on human conversations, IELTS was a pioneer of four-skills English language testing more than 30 years ago. IELTS continues to set the standard for English language testing today."
       },
       {
-        "id": 3,
-        "name": "gre1",
+        "id": "gre1",
+        "name": "GRE",
         "duration": 120,
         "class": 75,
         "modeltest": 22,
