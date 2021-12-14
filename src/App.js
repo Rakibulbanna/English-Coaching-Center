@@ -13,21 +13,22 @@ import OngoingReserch from './Component/OngoingReserch/OngoingReserch';
 import PublishedReserch from './Component/PublishedReserch/PublishedReserch';
 import Accountcreation from './Component/Accountcreation/Accountcreation';
 import Login from './Component/Login/Login';
-import  {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useState } from 'react';
+import Profile from './Component/Profile/Profile';
 
 
 function App() {
-  
+
   return (
     <div>
 
       <Router>
-      <Header></Header>
+        <Header></Header>
 
         <Switch>
           <Route exact path="/">
-          <Home></Home>
+            <Home></Home>
           </Route>
           <Route path="/home">
             <Home></Home>
@@ -49,20 +50,23 @@ function App() {
           </Route>
           <Route exact path="/mentor">
             <Mentor></Mentor>
-            </Route>
+          </Route>
           <Route exact path="/accountcreation">
             <Accountcreation></Accountcreation>
-            </Route>
-            <Route exact path="/login">
-              <Login ></Login>
-              {/* <Login handleGoogleSignIn={handleGoogleSignIn} handleSignOut={handleSignOut} user={user}></Login> */}
+          </Route>
+          <Route exact path="/profile">
+            <Profile></Profile>
+          </Route>
+          <Route exact path="/login">
+            <Login ></Login>
+            {/* <Login handleGoogleSignIn={handleGoogleSignIn} handleSignOut={handleSignOut} user={user}></Login> */}
           </Route>
 
           <Route exact path="*">
             <NotFound></NotFound>
-            </Route>
+          </Route>
 
-          
+
         </Switch>
       </Router>
       {/* <Course></Course>

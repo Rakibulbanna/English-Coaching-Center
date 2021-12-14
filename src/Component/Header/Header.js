@@ -1,9 +1,14 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
 import { Dropdown, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import useFirebase from '../../hooks/useFirebase';
+
 const Header = () => {
+
+    const {user,handleSignOut}=useFirebase();
+
     const [show, setShow] = useState(false);
     const showDropdown = (e) => {
         setShow(!show);
@@ -20,10 +25,11 @@ const Header = () => {
 
                     <Nav className="me-auto">
 
-                        <NavLink to="/" className="navbar-brand text-white logo-sp"><h4>Education center system</h4></NavLink>
-                        <NavLink exact to="/home" className="navbar-brand text-white link-sp ">Home</NavLink>
-                        <NavLink exact to="/about" className="navbar-brand text-white link-sp ">About</NavLink>
-                        <NavLink exact to="/course" className="navbar-brand text-white link-sp ">Course</NavLink>
+                        <Link to="/" className="navbar-brand text-white logo-sp"><h4>Education center system</h4></Link>
+                        <Link exact to="/home" className="navbar-brand text-white link-sp ">Home</Link>
+                        <Link exact to="/about" className="navbar-brand text-white link-sp ">About</Link>
+                        <Link exact to="/course" className="navbar-brand text-white link-sp ">Course</Link>
+
 
                         <NavDropdown title={
                             <span className="navbar-brand text-white">Reserch</span>
@@ -31,13 +37,13 @@ const Header = () => {
                             <Dropdown.Menu show={showDropdown}>
                                 <div className="menu-link">
                                     <Dropdown.Item >
-                                        <NavLink exact to="/upcommingreserch" className=" navbar-brand">upcomming reserch</NavLink>
+                                        <Link exact to="/upcommingreserch" className=" navbar-brand">upcomming reserch</Link>
                                     </Dropdown.Item >
                                     <Dropdown.Item >
-                                        <NavLink exact to="/ongoingreserch" className="  navbar-brand">ongoing reserch</NavLink>
+                                        <Link exact to="/ongoingreserch" className="  navbar-brand">ongoing reserch</Link>
                                     </Dropdown.Item>
                                     <Dropdown.Item >
-                                        <NavLink exact to="/publishedreserch" className="  navbar-brand">published reserch</NavLink>
+                                        <Link exact to="/publishedreserch" className="  navbar-brand">published reserch</Link>
                                     </Dropdown.Item>
                                 </div>
 
@@ -45,10 +51,13 @@ const Header = () => {
                         </NavDropdown>
 
 
-                        <NavLink exact to="/mentor" className="navbar-brand text-white link-sp ">Mentor</NavLink>
-                        <NavLink exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply membership</NavLink>
-                        <NavLink exact to="/login" className="navbar-brand text-white link-sp ">login</NavLink>
-
+                        <Link exact to="/mentor" className="navbar-brand text-white link-sp ">Mentor</Link>
+                        {/* <Link exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply membership</Link> */}
+                        
+                        {(user.email && user.displayName) ? <span>
+                        <Link exact to="/login" className="navbar-brand text-white link-sp" onClick={handleSignOut}>Log out</Link>
+                        <Link exact to="/profile" className="navbar-brand text-white link-sp ">profile</Link></span>
+                        : <Link exact to="/login" className="navbar-brand text-white link-sp ">login</Link>}
                     </Nav>
 
 
