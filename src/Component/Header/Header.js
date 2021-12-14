@@ -1,13 +1,13 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
-import { Dropdown, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Dropdown, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
 
-    const {user,handleSignOut}=useFirebase();
+    const { user, handleSignOut } = useFirebase();
 
     const [show, setShow] = useState(false);
     const showDropdown = (e) => {
@@ -53,11 +53,19 @@ const Header = () => {
 
                         <Link exact to="/mentor" className="navbar-brand text-white link-sp ">Mentor</Link>
                         {/* <Link exact to="/accountcreation" className="navbar-brand text-white link-sp ">Apply membership</Link> */}
-                        
-                        {(user.email && user.displayName) ? <span>
-                        <Link exact to="/login" className="navbar-brand text-white link-sp" onClick={handleSignOut}>Log out</Link>
-                        <Link exact to="/profile" className="navbar-brand text-white link-sp ">profile</Link></span>
-                        : <Link exact to="/login" className="navbar-brand text-white link-sp ">login</Link>}
+
+                        {(user.email && user.displayName) ? 
+                        <span>
+                            <Link exact to="/login" className="navbar-brand text-white link-sp" onClick={handleSignOut}>Log out</Link>
+
+                            <Link exact to="/profile" className="navbar-brand text-white link-sp ">{user.displayName} <img className='profile-img'
+                             src={user.photoURL} alt=''/></Link>
+                             </span>
+                            
+                            
+                            
+                             
+                            : <Link exact to="/login" className="navbar-brand text-white link-sp ">login</Link>}
                     </Nav>
 
 

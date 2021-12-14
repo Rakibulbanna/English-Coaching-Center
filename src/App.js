@@ -24,8 +24,7 @@ function App() {
     <div>
 
       <Router>
-        <Header></Header>
-
+        <Header className='d'></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>

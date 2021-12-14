@@ -6,7 +6,7 @@ const Profile = () => {
         <div className='text-center'>
             <h2>{user.displayName}</h2>
             <h2>{user.email}</h2>
-            <img src={user.photo} alt="" />
+            <img src={user.photoURL} alt="" />
         </div>
     );
 };
