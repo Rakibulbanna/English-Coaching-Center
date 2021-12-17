@@ -56,16 +56,16 @@ const Header = () => {
 
                         {(user.email && user.displayName) ? 
                         <span>
-                            <Link exact to="/login" className="navbar-brand text-white link-sp" onClick={handleSignOut}>Log out</Link>
+                            <Link exact to="/login" className="navbar-brand text-white last-link-sp" onClick={handleSignOut}>Log out</Link>
 
-                            <Link exact to="/profile" className="navbar-brand text-white link-sp ">{user.displayName} <img className='profile-img'
+                            <Link exact to="/profile" className="navbar-brand text-white last-link-sp">{user.displayName} <img className='profile-img'
                              src={user.photoURL} alt=''/></Link>
                              </span>
                             
                             
                             
                              
-                            : <Link exact to="/login" className="navbar-brand text-white link-sp ">login</Link>}
+                            : <Link exact to="/login" className="navbar-brand text-white last-link-sp">login</Link>}
                     </Nav>
 
 

@@ -5,7 +5,7 @@ const ShowHomePage = (props) => {
     const { id, name, duration, modeltest, price, img, detail } = props.course
 
     return (
-        <Col>
+        
             <Card>
                 <Card.Img variant="top" className="mentor-photo" src={img} />
                 <Card.Body>
@@ -41,7 +41,7 @@ const ShowHomePage = (props) => {
                     </div>
                 </div>
             </Card>
-        </Col>
+        
 
 
 

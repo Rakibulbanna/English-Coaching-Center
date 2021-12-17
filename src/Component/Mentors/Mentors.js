@@ -18,7 +18,7 @@ const Mentors = (props) => {
                 </div>
 
             </article> */}
-             <Col>
+             
             <Card>
                 <Card.Img variant="top" className="mentor-photo" src={img} />
                 <Card.Body>
@@ -31,7 +31,7 @@ const Mentors = (props) => {
                     </Card.Text>
                 </Card.Body>
             </Card>
-        </Col>
+        
         </div>
     );
 };

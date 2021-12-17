@@ -1,0 +1,51 @@
+[
+
+    
+      {
+        "id": "set1",
+        "name": "SET",
+        "duration": 65,
+        "class": 60,
+        "modeltest": 12,
+        "support": "all time",
+        "price": 12000,
+        "img": "https://image.slidesharecdn.com/setmytest-englishupload-191014112308/95/set-my-test-english-1-638.jpg?cb=1571052396",
+        "detail": "SET (Summative Evaluation Tool) is designed to facilitate student feedback on learning and teaching for students, teachers and academic managers.Students have the opportunity to provide feedback through SET on eligible courses and teachers at the University each time a course is offered."
+      },{
+        "id": "ielts1",
+        "name": "IELTS",
+        "duration": 90,
+        "class": 65,
+        "modeltest": 16,
+        "price": 15000,
+        "support": "all time",
+        "img": "https://www.communicateschool.co.uk/wp-content/uploads/2015/06/IELTS-logo.jpg",
+        "detail": "IELTS assesses a test taker's English language proficiency across four skills: listening, reading, writing, and speaking. ... With a focus on human conversations, IELTS was a pioneer of four-skills English language testing more than 30 years ago. IELTS continues to set the standard for English language testing today."
+      },
+      {
+        "id": "gre1",
+        "name": "GRE",
+        "duration": 120,
+        "class": 75,
+        "modeltest": 22,
+        "support": "lifetime",
+        "price": 22000,
+        "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210618212952/GRE-General-2021-Important-Dates-Exam-Pattern-Syllabus-Score.png",
+        "detail": "The Graduate Record Examination, or GRE, is an important step in the graduate school or business school application process. The GRE is a multiple-choice, computer-based, standardized exam that is often required for admission to graduate programs and graduate business programs (MBA) globally."
+      },
+      {
+        "id": "english1",
+        "name": "English",
+        "duration": 90,
+        "class": 70,
+        "modeltest": 15,
+        "support": "lifetime",
+        "price": 13000,
+        "img": "https://wspucla.files.wordpress.com/2018/01/learnenglish.jpg",
+        "detail": "Students pursuing a degree in English or English literature often read materials from various genres of literature, including poetry, dramas and novels, as well as take specialized writing classes. Those in an English education program study the history of the language, composition, grammar, reading, language acquisition and language development. "
+      }
+
+
+
+
+    ]

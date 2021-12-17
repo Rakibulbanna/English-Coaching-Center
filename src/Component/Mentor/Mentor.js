@@ -11,7 +11,8 @@ const Mentor = () => {
             .then(data => setmentors(data))
     }, [])
     return (
-        <Container>
+        <div>
+            <Container>
            <h2 className="text-center">Our Mentor:{mentors.length}</h2>
            <Row xs={1} md={3} className="g-4">
             {
@@ -19,7 +20,8 @@ const Mentor = () => {
                     key={mentor.id}></Mentors>)
             } 
             </Row>
-        </Container>
+            </Container>
+        </div>
             
         
     );

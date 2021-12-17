@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { Carousel, Container, Row } from 'react-bootstrap';
 import ShowHomePage from '../ShowHomePage/ShowHomePage';
 import "./Home.css"
-import bannerimg from './../../image/banner.png';
+// import bannerimg from './../../image/banner.png';
 const Home = () => {
     const [course, setCourse] = useState([])
     useEffect(() => {
-        fetch("./home.JSON")
+        fetch("./home.json")
             .then(res => res.json())
             .then(data => setCourse(data))
     }, [])
@@ -46,7 +46,7 @@ const Home = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={bannerimg}
+      src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210618212952/GRE-General-2021-Important-Dates-Exam-Pattern-Syllabus-Score.png"
       alt="Third slide"
     />
     <Carousel.Caption>
@@ -58,8 +58,8 @@ const Home = () => {
 </Carousel>
 </div>
 
-        <Container>
-            
+      
+<Container>
             <h2 className="text-center">Our sample courses</h2><br />
             <Row xs={1} md={2} className="g-5">
                 {
@@ -68,7 +68,8 @@ const Home = () => {
                         <ShowHomePage course={course}></ShowHomePage>)
                 }
             </Row>
-        </Container>    
+ </Container>
+          
 </div>
     );
 };
