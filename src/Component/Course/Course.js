@@ -7,12 +7,7 @@ import useFirebase from '../../hooks/useFirebase';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Redirect } from 'react-router-dom';
 const Course = () => {
-    // const [courses, setcourses] = useState([])
-    // useEffect(() => {
-    //     fetch("./products.json")
-    //         .then(res => res.json())
-    //         .then(data => setcourses(data))
-    // }, [])
+    
     const { user } = useFirebase();
     return (
         <div>

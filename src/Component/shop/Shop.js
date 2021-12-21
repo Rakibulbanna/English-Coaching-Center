@@ -96,16 +96,6 @@ const Shop = () => {
 
                     </Card>
                 </Col>
-               
-                {/* <div className="product-container">
-                  <h2>product : {products.length}</h2>
-                  {
-                      displayProducts.map(product => <Product product={product} key={product.key}
-                        handleAddToCart={handleAddToCart} ></Product>)
-                  }
-              </div> */}
-
-
             </Row>
         </div>
     );
