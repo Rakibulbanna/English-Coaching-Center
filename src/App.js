@@ -16,7 +16,7 @@ import Login from './Component/Login/Login';
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import Profile from './Component/Profile/Profile';
-
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 function App() {
 
@@ -73,6 +73,8 @@ function App() {
       <NotFound></NotFound>
       <Footer></Footer> */}
       <br />
+      <MessengerCustomerChat
+    pageId="110291651516813" appId="1288428648340884" />
       <div>
         <Footer></Footer>
 
