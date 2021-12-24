@@ -11,6 +11,7 @@ const Course = () => {
     const { user } = useFirebase();
     return (
         <div>
+            
             {
                 (user.email && user.displayName) ? <Shop></Shop> : <div className='text-center m-5'><h1>Your are not log in</h1><br />
                 <Link exact to="/login" className="navbar-brand text-brown link-course" >go to log in</Link></div>

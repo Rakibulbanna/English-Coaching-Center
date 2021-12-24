@@ -1,10 +1,28 @@
 .search-container{
+    margin-top: 5%;
     background-color: #725229;
     text-align: center;
     line-height: 70%;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    top :0
+    
 }
+@media only screen and (max-width: 600px) {
+    .search-container{
+        margin-top: 13%;
+        text-align: center;
+        line-height: 70%;
+        position: fixed;
+        width: 100%;
+        top :0
+        
+    }
+  }
 .search-container input{
     width: 75%;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 .shop-container{
@@ -17,3 +35,8 @@
     margin-right: 5px;
     margin-left: 30px;
 }
+.c{
+    color: white;
+    margin-left: 25px;
+}
+

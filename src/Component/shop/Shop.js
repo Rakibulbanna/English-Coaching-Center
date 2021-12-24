@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import '../shop/Shop.css';
-import { addToDb, getStoredCart } from '../../utilities/fakedb'
+import { addToDb, getStoredCart,deleteFromDb } from '../../utilities/fakedb'
 import { Container, Row, Card, Col } from 'react-bootstrap';
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Badge } from '@material-ui/core';
 
 const Shop = () => {
     const [products, setproducts] = useState([]);
@@ -56,6 +58,18 @@ const Shop = () => {
         addToDb(product.key);
 
     }
+    // const handleDeleteCart = (e) => {
+    //     const array = cart; // make a separate copy of the array
+    //     const index = array.indexOf(e)
+    //     if (index !== -1) {
+    //      delete array[index];
+    //     }
+    //     setCart(array);
+
+    //     //save to local database
+    //     deleteFromDb(e.key);
+
+    // }
 
     const handelSearch = event => {
         const searchText = event.target.value;
@@ -67,18 +81,29 @@ const Shop = () => {
         // console.log(matcherdProdect.length);
     }
     return (
-        <div>
+        <div >
+
             <div className="search-container">
+
+
                 <input type="text"
                     onChange={handelSearch}
                     placeholder="search here" />
-            </div>
-            <Row>
-                 <Col sm={4}>
-                    <Card>
-                    <Cart cart={cart}></Cart>
+                <Badge color="secondary" badgeContent={cart.length}>
+                    <ShoppingCartIcon className='c' />{" "}
+                </Badge>
+                <br />
+                <br />
 
-                
+            </div>
+            <br />
+            <Row>
+
+                <Col sm={4}>
+                    <Card className='cart-fixed'>
+                        <Cart cart={cart} ></Cart>
+
+
                     </Card>
                 </Col>
                 <Col sm={8}>

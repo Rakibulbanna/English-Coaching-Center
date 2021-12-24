@@ -17,14 +17,25 @@ import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import Profile from './Component/Profile/Profile';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import { StickyNav } from 'react-js-stickynav';
 
 function App() {
+
+
 
   return (
     <div>
 
+
       <Router>
-        <Header className='d'></Header>
+        <Header></Header>
+        <div className="nav-size">
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -74,7 +85,7 @@ function App() {
       <Footer></Footer> */}
       <br />
       <MessengerCustomerChat
-    pageId="110291651516813" appId="1288428648340884" />
+        pageId="110291651516813" appId="1288428648340884" />
       <div>
         <Footer></Footer>
 

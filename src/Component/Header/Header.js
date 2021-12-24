@@ -4,6 +4,7 @@ import { Dropdown, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import useFirebase from '../../hooks/useFirebase';
+import { StickyNav } from 'react-js-stickynav'
 
 const Header = () => {
 
@@ -16,9 +17,35 @@ const Header = () => {
     const hideDropdown = e => {
         setShow(false);
     }
+    const style = () => {
+        return (
+          <style jsx>{`
+            .nav {
+            
+              position: fixed;
+              z-index: 2000;
+              width: 100%;
+            }
+           
+            
+          `}</style>
+        )
+      }
+   
+      const divStyle = {
+        
+        width: "100%",
+        position: "fixed",
+        zIndex: "2000",
+    };
+      
+
     return (
-        <div >
-            <Navbar className="menu-link w-100 p-3 m-10" collapseOnSelect expand="lg" id="navbar" >
+        
+             
+             <div style={divStyle} >
+                
+            <Navbar className="menu-link w-100 p-3 m-15 fixed-navbar b" collapseOnSelect expand="lg" id="navbar" >
                 {/* <Container className="b"> */}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -56,7 +83,7 @@ const Header = () => {
 
                         {(user.email && user.displayName) ? 
                         <span>
-                            <Link exact to="/login" className="navbar-brand text-white last-link-sp" onClick={handleSignOut}>Log out</Link>
+                            <Link exact to="/login" className="navbar-brand text-white last-link-sp" onClick={handleSignOut}>Log out <i className="fas fa-sign-in-alt"></i></Link>
 
                             <Link exact to="/profile" className="navbar-brand text-white last-link-sp">{user.displayName} <img className='profile-img'
                              src={user.photoURL} alt=''/></Link>
@@ -65,14 +92,21 @@ const Header = () => {
                             
                             
                              
-                            : <Link exact to="/login" className="navbar-brand text-white last-link-sp">login</Link>}
+                            : 
+                           <Link exact to="/login"  className="navbar-brand text-white last-link-sp header-btn">
+                                login 
+                            <i className="fas fa-user-plus"></i></Link>}
+
+                            
+                             
                     </Nav>
 
 
                 </Navbar.Collapse>
                 {/* </Container> */}
             </Navbar>
-        </div>
+            </div>
+        
     );
 };
 

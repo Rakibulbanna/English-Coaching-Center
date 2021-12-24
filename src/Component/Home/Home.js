@@ -1,9 +1,13 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Carousel, Container, Row } from 'react-bootstrap';
+import Map from '../Map/Map';
+
 import ShowHomePage from '../ShowHomePage/ShowHomePage';
 import "./Home.css"
 // import bannerimg from './../../image/banner.png';
+
+
 const Home = () => {
     const [course, setCourse] = useState([])
     useEffect(() => {
@@ -69,6 +73,10 @@ const Home = () => {
                 }
             </Row>
  </Container>
+
+ <br />
+ <br />
+ <Map></Map>
           
 </div>
     );
