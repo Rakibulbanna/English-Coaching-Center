@@ -6,6 +6,7 @@ import { addToDb, getStoredCart,deleteFromDb } from '../../utilities/fakedb'
 import { Container, Row, Card, Col } from 'react-bootstrap';
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Badge } from '@material-ui/core';
+import CheckOut from '../CheckOut/CheckOut';
 
 const Shop = () => {
     const [products, setproducts] = useState([]);
@@ -53,23 +54,21 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-
+console.log(cart)
         //save to local database
         addToDb(product.key);
 
     }
-    // const handleDeleteCart = (e) => {
-    //     const array = cart; // make a separate copy of the array
-    //     const index = array.indexOf(e)
-    //     if (index !== -1) {
-    //      delete array[index];
-    //     }
-    //     setCart(array);
-
-    //     //save to local database
-    //     deleteFromDb(e.key);
-
-    // }
+    const handleDeleteCart = (e) => {
+        // const array = ; // make a separate copy of the array
+        var array = [...cart]; // make a separate copy of the array
+        var index = array.indexOf(e)
+        if (index !== -1) {
+          array.splice(index, 1);
+          this.setState({cart: array});
+        }
+        setCart(array);
+    }
 
     const handelSearch = event => {
         const searchText = event.target.value;
@@ -101,9 +100,8 @@ const Shop = () => {
 
                 <Col sm={4}>
                     <Card className='cart-fixed'>
-                        <Cart cart={cart} ></Cart>
-
-
+                        <Cart cart={cart} handleDeleteCart={handleDeleteCart} key={cart.key} ></Cart>
+                        
                     </Card>
                 </Col>
                 <Col sm={8}>

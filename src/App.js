@@ -18,6 +18,7 @@ import { useState } from 'react';
 import Profile from './Component/Profile/Profile';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import { StickyNav } from 'react-js-stickynav';
+import CheckOut from './Component/CheckOut/CheckOut';
 
 function App() {
 
@@ -67,6 +68,9 @@ function App() {
           <Route exact path="/profile">
             <Profile></Profile>
           </Route>
+          <Route exact path="/CheckOut">
+            <CheckOut></CheckOut>
+          </Route>
           <Route exact path="/login">
             <Login ></Login>
             {/* <Login handleGoogleSignIn={handleGoogleSignIn} handleSignOut={handleSignOut} user={user}></Login> */}
@@ -78,18 +82,15 @@ function App() {
 
 
         </Switch>
+        
       </Router>
-      {/* <Course></Course>
-      <Mentor></Mentor>
-      <NotFound></NotFound>
-      <Footer></Footer> */}
-      <br />
+    
       <MessengerCustomerChat
         pageId="110291651516813" appId="1288428648340884" />
-      <div>
-        <Footer></Footer>
-
-      </div>
+        <br />
+        <br />
+        <br />
+    <Footer></Footer>
     </div>
   );
 }

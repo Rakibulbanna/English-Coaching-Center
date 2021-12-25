@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import CheckOut from '../CheckOut/CheckOut';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -63,10 +65,10 @@ const Cart = (props) => {
                         <div className="cart-selected-header">
                             <p>{cartShow.name}</p>
                             <br />
-                            <button type="button" className="btn bt-background text-white" data-bs-toggle="modal"
+                            {/* <button type="button" className="btn bt-background text-white" data-bs-toggle="modal"
                                 onClick={() => props.handleDeleteCart(props.cart)} >
                                 delete
-                            </button>
+                            </button> */}
                         </div >
                         <div>
                             <img src={cartShow.img} alt="" />
@@ -75,9 +77,12 @@ const Cart = (props) => {
                 )
             }
             {/* data-bs-target={`#${id}`} */}
+            <Link exact to="/CheckOut">
             <button type="button" className="btn bt-background text-white mt-3" data-bs-toggle="modal" >
                 check out
             </button>
+            
+            </Link>
 
 
 

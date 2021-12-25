@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from '../Map/Map';
 import "./About.css"
 
 const About = () => {
@@ -20,8 +21,11 @@ const About = () => {
                 <h2>Thank You</h2>
             </div>
             <div class="card-footer text-center">
-                <small class="text-muted">Hot Line : 018*********</small>
+                <small class="text-muted">Hot Line : 01878911013</small>
+                
             </div>
+            <br />
+            <Map></Map>
         </div>
 
     );

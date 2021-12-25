@@ -76,7 +76,7 @@ const Home = () => {
 
  <br />
  <br />
- <Map></Map>
+ 
           
 </div>
     );
