@@ -6,7 +6,7 @@ import "./Mentor.css"
 const Mentor = () => {
     const [mentors, setmentors] = useState([])
     useEffect(() => {
-        fetch("./teacher.json")
+        fetch("http://localhost:5000/users")
             .then(res => res.json())
             .then(data => setmentors(data))
     }, [])

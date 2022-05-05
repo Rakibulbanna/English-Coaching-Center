@@ -5,13 +5,13 @@ import "./About.css"
 const About = () => {
     return (
 
-        <div class="card">
+        <div className="card">
 
-            <div class="card-body text-center">
-                <h5 class="card-title">Founder:</h5>
-                <h2 class="card-title">Rakib ul Banna</h2>
+            <div className="card-body text-center">
+                <h5 className="card-title">Founder:</h5>
+                <h2 className="card-title">Rakib ul Banna <br />&<br /> Mukta Rani Das</h2>
 
-                <p class="card-text">
+                <p className="card-text">
 
                     We are makeing an education center system, where teacher, student and admin or authority can easily manage the education center. Our system will help the three types of user such as Teacher, student and admin.
                     Here teachers can easily see the details of student, Ongoing training courses and research.
@@ -20,8 +20,8 @@ const About = () => {
                 </p>
                 <h2>Thank You</h2>
             </div>
-            <div class="card-footer text-center">
-                <small class="text-muted">Hot Line : 01878911013</small>
+            <div className="card-footer text-center">
+                <small className="text-muted">Hot Line : 01878911013</small>
                 
             </div>
             <br />

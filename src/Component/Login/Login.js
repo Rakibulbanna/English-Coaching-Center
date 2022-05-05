@@ -22,7 +22,7 @@ const Login = (e) => {
         setUserName,
         handleNameChange,
         handleEmailChange,
-        handlePasswprdChange} = useFirebase();
+        handlePasswprdChange} = useAuth();
    
     return (
         <div className="form-body">

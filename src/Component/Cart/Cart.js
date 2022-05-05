@@ -6,7 +6,7 @@ import './Cart.css';
 const Cart = (props) => {
 
 
-    //console.log(cart);
+    //console.log(props.cart);
     let BeforeTaxTotal = 0;
 
     for (const product of props.cart) {
@@ -65,10 +65,10 @@ const Cart = (props) => {
                         <div className="cart-selected-header">
                             <p>{cartShow.name}</p>
                             <br />
-                            {/* <button type="button" className="btn bt-background text-white" data-bs-toggle="modal"
-                                onClick={() => props.handleDeleteCart(props.cart)} >
+                            <button type="button" className="btn bt-background text-white" data-bs-toggle="modal"
+                                onClick={() => props.handleDeleteCart(cartShow)} >
                                 delete
-                            </button> */}
+                            </button>
                         </div >
                         <div>
                             <img src={cartShow.img} alt="" />

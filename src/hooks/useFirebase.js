@@ -39,7 +39,7 @@ const useFirebase = () => {
                 //     photo: photoURL
                 // };
                 setuser(result.user);
-                  console.log(result.user);
+                 // console.log(result.user);
 
             }).catch((error) => {
                 console.log(error.message);
@@ -54,7 +54,7 @@ const useFirebase = () => {
 useEffect(() => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
-          console.log('inside state change',user);
+         // console.log('inside state change',user);
           setuser(user);
           
         } else {

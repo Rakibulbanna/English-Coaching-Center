@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { Dropdown, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import useFirebase from '../../hooks/useFirebase';
-import { StickyNav } from 'react-js-stickynav'
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
 
-    const { user, handleSignOut } = useFirebase();
+    const { user, handleSignOut } = useAuth();
 
     const [show, setShow] = useState(false);
     const showDropdown = (e) => {
@@ -17,35 +16,14 @@ const Header = () => {
     const hideDropdown = e => {
         setShow(false);
     }
-    const style = () => {
-        return (
-          <style jsx>{`
-            .nav {
-            
-              position: fixed;
-              z-index: 2000;
-              width: 100%;
-            }
-           
-            
-          `}</style>
-        )
-      }
-   
-      const divStyle = {
-        
-        width: "100%",
-        position: "fixed",
-        zIndex: "2000",
-    };
-      
+    
 
     return (
         
              
-             <div style={divStyle} >
+            
                 
-            <Navbar className="menu-link w-100 p-3 m-15 fixed-navbar b" collapseOnSelect expand="lg" id="navbar" >
+            <Navbar className="menu-link w-100 p-3 m-15 fixed-navbar b" sticky="top" collapseOnSelect expand="lg" id="navbar" >
                 {/* <Container className="b"> */}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -105,7 +83,7 @@ const Header = () => {
                 </Navbar.Collapse>
                 {/* </Container> */}
             </Navbar>
-            </div>
+            
         
     );
 };

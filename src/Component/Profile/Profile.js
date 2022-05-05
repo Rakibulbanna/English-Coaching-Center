@@ -1,7 +1,8 @@
 import React from 'react';
+import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 const Profile = () => {
-    const { user } = useFirebase();
+    const { user } = useAuth();
     return (
         <div className='text-center'>
             <h2>{user.displayName}</h2>

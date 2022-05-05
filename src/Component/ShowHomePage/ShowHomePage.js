@@ -29,7 +29,7 @@ const ShowHomePage = (props) => {
                             </div>
                             <div className="modal-body c">
                                 <img src={img} alt="" />
-                                <h4>{detail}</h4>
+                                <h4 className='text-black'>{detail}</h4>
                             </div>
 
                             <div className="modal-footer">

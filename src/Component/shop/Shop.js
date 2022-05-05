@@ -54,20 +54,22 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-console.log(cart)
+// console.log(cart)
         //save to local database
         addToDb(product.key);
 
     }
     const handleDeleteCart = (e) => {
-        // const array = ; // make a separate copy of the array
-        var array = [...cart]; // make a separate copy of the array
-        var index = array.indexOf(e)
+        // console.log(e)
+        var newCart = [...cart]; // make a separate copy of the array
+        var index = newCart.indexOf(e);
+        // console.log(index)
         if (index !== -1) {
-          array.splice(index, 1);
-          this.setState({cart: array});
-        }
-        setCart(array);
+            newCart.splice(index, 1);
+            setCart(newCart)
+            deleteFromDb(e.key);
+        }  
+             
     }
 
     const handelSearch = event => {
@@ -91,11 +93,10 @@ console.log(cart)
                 <Badge color="secondary" badgeContent={cart.length}>
                     <ShoppingCartIcon className='c' />{" "}
                 </Badge>
-                <br />
-                <br />
+                
 
             </div>
-            <br />
+           <br />
             <Row>
 
                 <Col sm={4}>
@@ -108,7 +109,7 @@ console.log(cart)
                     <Card>
                         <Container >
 
-                            <h1 className="text-center">Our total Course:{displayProducts.length}</h1>
+                            <h1 className="text-center">popular Course:{displayProducts.length}</h1>
                             <Row xs={1} md={3} className="g-4">
                                 {
                                     displayProducts.map(product => <Product product={product} key={product.key}
